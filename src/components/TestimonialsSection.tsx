@@ -38,9 +38,7 @@ export default function TestimonialsSection() {
     return Array.from({ length: 5 }, (_, i) => (
       <svg
         key={i}
-        className={`w-5 h-5 ${
-          i < rating ? "text-amber-400" : "text-amber-200"
-        }`}
+        className={`w-5 h-5 ${i < rating ? "text-blue-400" : "text-gray-600"}`}
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -50,45 +48,36 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="py-20 bg-amber-50">
+    <section className="py-20 bg-[#080a20]">
       <div className="container">
-        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-6">
-            What Our Customers Say
-          </h2>
-          <p className="text-xl text-amber-800 max-w-3xl mx-auto">
+          <h2 className="font-bold text-white mb-6">What Our Customers Say</h2>
+          <p className="text-gray-300 max-w-3xl mx-auto">
             Don't just take our word for it. Here's what chefs, bartenders, and
             home cooks have to say about our premium extracts and syrups.
           </p>
         </div>
 
-        {/* Testimonials Grid */}
         <div className="grid grid--2-col gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in"
+              className="bg-[#1a1d3a] p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 animate-fade-in border border-[#2a2d4a]"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              {/* Rating */}
               <div className="flex mb-4">{renderStars(testimonial.rating)}</div>
-
-              {/* Content */}
-              <blockquote className="text-lg text-amber-800 mb-6 leading-relaxed">
+              <blockquote className="text-gray-300 mb-6 leading-relaxed">
                 "{testimonial.content}"
               </blockquote>
-
-              {/* Author */}
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">
                   {testimonial.avatar}
                 </div>
                 <div>
-                  <div className="font-semibold text-amber-900">
+                  <div className="font-semibold text-white">
                     {testimonial.name}
                   </div>
-                  <div className="text-amber-700 text-sm">
+                  <div className="text-gray-400 text-sm">
                     {testimonial.role}
                   </div>
                 </div>
@@ -97,23 +86,22 @@ export default function TestimonialsSection() {
           ))}
         </div>
 
-        {/* Trust Indicators */}
         <div className="mt-16 text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-semibold text-amber-900 mb-6">
+          <div className="bg-[#1a1d3a] rounded-2xl p-8 shadow-lg border border-[#2a2d4a]">
+            <h3 className="font-semibold text-white mb-6">
               Trusted by Culinary Professionals
             </h3>
             <div className="grid grid--4-col items-center gap-8">
-              <div className="text-amber-600 font-semibold text-lg">
+              <div className="text-blue-400 font-semibold text-lg">
                 Restaurants
               </div>
-              <div className="text-amber-600 font-semibold text-lg">
+              <div className="text-blue-400 font-semibold text-lg">
                 Bakeries
               </div>
-              <div className="text-amber-600 font-semibold text-lg">
+              <div className="text-blue-400 font-semibold text-lg">
                 Coffee Shops
               </div>
-              <div className="text-amber-600 font-semibold text-lg">
+              <div className="text-blue-400 font-semibold text-lg">
                 Home Chefs
               </div>
             </div>

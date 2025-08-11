@@ -38,53 +38,39 @@ export default function BlogPreview() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#1a1d3a]">
       <div className="container">
-        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-6">
-            Flavour Inspiration
-          </h2>
-          <p className="text-xl text-amber-800 max-w-3xl mx-auto">
+          <h2 className="font-bold text-white mb-6">Flavour Inspiration</h2>
+          <p className="text-gray-300 max-w-3xl mx-auto">
             Discover creative ways to use our extracts and syrups, from baking
             tips to cocktail recipes and everything in between.
           </p>
         </div>
 
-        {/* Blog Posts Grid */}
         <div className="grid grid--3-col gap-8 mb-12">
           {blogPosts.map((post, index) => (
             <article
               key={post.id}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group animate-fade-in"
+              className="bg-[#080a20] rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group animate-fade-in border border-[#2a2d4a]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Image Placeholder */}
-              <div className="w-full h-48 bg-gradient-to-br from-amber-100 to-orange-100 flex items-center justify-center">
-                <div className="text-amber-600 text-sm font-medium">
+              <div className="w-full h-48 bg-gradient-to-br from-blue-900 to-blue-800 flex items-center justify-center">
+                <div className="text-blue-300 text-sm font-medium">
                   Recipe Image
                 </div>
               </div>
-
-              {/* Content */}
               <div className="p-6">
-                {/* Category */}
-                <div className="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                <div className="inline-block bg-blue-900 text-blue-300 text-xs font-semibold px-3 py-1 rounded-full mb-3">
                   {post.category}
                 </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-semibold text-amber-900 mb-3 group-hover:text-orange-600 transition-colors">
+                <h3 className="font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   <Link href={`/blog/${post.id}`}>{post.title}</Link>
                 </h3>
-
-                {/* Excerpt */}
-                <p className="text-amber-800 mb-4 leading-relaxed">
+                <p className="text-gray-300 mb-4 leading-relaxed">
                   {post.excerpt}
                 </p>
-
-                {/* Meta */}
-                <div className="flex items-center justify-between text-sm text-amber-600">
+                <div className="flex items-center justify-between text-sm text-gray-400">
                   <div className="flex items-center space-x-2">
                     <span>{post.author}</span>
                     <span>•</span>
@@ -97,7 +83,6 @@ export default function BlogPreview() {
           ))}
         </div>
 
-        {/* View All Posts Button */}
         <div className="text-center">
           <Link
             href="/blog"

@@ -2,18 +2,23 @@
 
 /* Custom CSS Variables matching Blind Owl Flavour Co. brand */
 :root {
-  --color-background: #faf9f6;
-  --color-foreground: #2d1810;
-  --color-button: #8b4513;
-  --color-button-label: #faf9f6;
-  --color-secondary-button-label: #8b4513;
-  --color-shadow: #2d1810;
-  --color-accent: #d2691e;
-  --color-accent-light: #cd853f;
-  --color-warm-brown: #a0522d;
-  --color-cream: #f5f5dc;
-  --color-earth: #8b4513;
-  --color-natural: #6b4423;
+  --color-background: #080a20;
+  --color-foreground: #ffffff;
+  --color-button: #ffffff;
+  --color-button-label: #080a20;
+  --color-secondary-button-label: #ffffff;
+  --color-shadow: #000000;
+  --color-accent: #4a90e2;
+  --color-accent-light: #6ba3e8;
+  --color-primary: #080a20;
+  --color-secondary: #1a1d3a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b8b9c0;
+  --color-border: #2a2d4a;
+  --color-hover: #1a1d3a;
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
 
   /* Typography */
   --font-body-scale: 1;
@@ -32,18 +37,19 @@
   --shadow-horizontal-offset: 0;
   --shadow-vertical-offset: 0.2rem;
   --shadow-blur-radius: 0.4rem;
-  --shadow-opacity: 0.08;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-strong: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  --shadow-stronger: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.3);
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --color-background: #2d1810;
-    --color-foreground: #faf9f6;
-    --color-button: #d2691e;
-    --color-button-label: #2d1810;
-    --color-secondary-button-label: #faf9f6;
-    --color-shadow: #faf9f6;
+    --color-background: #ffffff;
+    --color-foreground: #080a20;
+    --color-button: #080a20;
+    --color-button-label: #ffffff;
+    --color-secondary-button-label: #080a20;
+    --color-shadow: #080a20;
   }
 }
 
@@ -53,15 +59,17 @@
 }
 
 html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-foreground);
+  font-family: "Geist Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  font-size: 1.6rem;
   line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
   margin: 0;
   padding: 0;
 }
@@ -73,27 +81,43 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.6rem 0;
+  color: var(--color-text-primary) !important;
+  font-size: inherit;
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: 4.8rem !important;
+  font-size: clamp(3.2rem, 8vw, 4.8rem);
 }
 h2 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: 3.6rem !important;
+  font-size: clamp(2.8rem, 6vw, 3.6rem);
 }
 h3 {
-  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-size: 2.4rem !important;
+  font-size: clamp(2rem, 4vw, 2.4rem);
 }
 h4 {
-  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  font-size: 2rem !important;
+  font-size: clamp(1.8rem, 3vw, 2rem);
+}
+h5 {
+  font-size: 1.8rem !important;
+  font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+}
+h6 {
+  font-size: 1.6rem !important;
+  font-size: clamp(1.4rem, 2vw, 1.6rem);
 }
 
 p {
-  margin: 0 0 1rem 0;
-  line-height: 1.7;
+  margin: 0 0 1.6rem 0;
+  color: var(--color-text-secondary);
+  font-size: 1.6rem;
+  line-height: 1.6;
 }
 
 /* Links */
@@ -112,48 +136,58 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius);
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  cursor: pointer;
+  padding: 1.2rem 2.4rem;
   border: none;
-  font-size: 1rem;
-  line-height: 1;
+  border-radius: var(--border-radius);
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .btn-primary {
   background-color: var(--color-button);
   color: var(--color-button-label);
+  box-shadow: var(--shadow-strong);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-warm-brown);
+  background-color: var(--color-hover);
   transform: translateY(-1px);
+  box-shadow: var(--shadow-stronger);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--color-button);
-  border: 2px solid var(--color-button);
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-text-primary);
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-button);
-  color: var(--color-button-label);
+  background-color: var(--color-text-primary);
+  color: var(--color-background);
 }
 
 /* Container */
 .container {
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
-@media (min-width: 750px) {
+@media (max-width: 768px) {
   .container {
-    padding: 0 3rem;
+    max-width: var(--page-width-tablet);
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: var(--page-width-mobile);
+    padding: 0 1rem;
   }
 }
 
@@ -175,12 +209,43 @@ a:hover {
   grid-template-columns: repeat(4, 1fr);
 }
 
-@media (max-width: 749px) {
+@media (max-width: 768px) {
   .grid--2-col,
   .grid--3-col,
   .grid--4-col {
     grid-template-columns: 1fr;
   }
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.8s ease-out forwards;
 }
 
 /* Utility classes */
@@ -194,120 +259,72 @@ a:hover {
   text-align: right;
 }
 
-.mb-1 {
+.mb-2 {
   margin-bottom: 0.5rem;
 }
-.mb-2 {
+.mb-4 {
   margin-bottom: 1rem;
 }
-.mb-3 {
+.mb-6 {
   margin-bottom: 1.5rem;
 }
-.mb-4 {
+.mb-8 {
   margin-bottom: 2rem;
 }
-.mb-5 {
-  margin-bottom: 2.5rem;
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.mb-16 {
+  margin-bottom: 4rem;
+}
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
-.mt-1 {
-  margin-top: 0.5rem;
-}
-.mt-2 {
+.mt-4 {
   margin-top: 1rem;
 }
-.mt-3 {
-  margin-top: 1.5rem;
-}
-.mt-4 {
+.mt-8 {
   margin-top: 2rem;
 }
-.mt-5 {
-  margin-top: 2.5rem;
+.mt-12 {
+  margin-top: 3rem;
+}
+.mt-16 {
+  margin-top: 4rem;
+}
+.mt-20 {
+  margin-top: 5rem;
 }
 
-.py-1 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-.py-2 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-.py-3 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
 .py-4 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 1rem 0;
 }
-.py-5 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+.py-8 {
+  padding: 2rem 0;
+}
+.py-12 {
+  padding: 3rem 0;
+}
+.py-16 {
+  padding: 4rem 0;
+}
+.py-20 {
+  padding: 5rem 0;
 }
 
-.px-1 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-.px-2 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.px-3 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
 .px-4 {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 0 1rem;
 }
-.px-5 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.px-8 {
+  padding: 0 2rem;
 }
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.px-12 {
+  padding: 0 3rem;
 }
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.px-16 {
+  padding: 0 4rem;
 }
-
-.animate-fade-in {
-  animation: fadeIn 0.6s ease-out;
-}
-
-.animate-slide-in {
-  animation: slideIn 0.6s ease-out;
-}
-
-/* Responsive utilities */
-@media (max-width: 749px) {
-  .mobile-hidden {
-    display: none;
-  }
-}
-
-@media (min-width: 750px) {
-  .desktop-hidden {
-    display: none;
-  }
+.px-20 {
+  padding: 0 5rem;
 }

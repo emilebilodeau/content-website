@@ -3,7 +3,7 @@ export default function FeaturesSection() {
     {
       icon: (
         <svg
-          className="w-12 h-12"
+          className="w-10 h-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -23,7 +23,7 @@ export default function FeaturesSection() {
     {
       icon: (
         <svg
-          className="w-12 h-12"
+          className="w-10 h-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -43,7 +43,7 @@ export default function FeaturesSection() {
     {
       icon: (
         <svg
-          className="w-12 h-12"
+          className="w-10 h-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -63,7 +63,7 @@ export default function FeaturesSection() {
     {
       icon: (
         <svg
-          className="w-12 h-12"
+          className="w-10 h-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -89,7 +89,7 @@ export default function FeaturesSection() {
     {
       icon: (
         <svg
-          className="w-12 h-12"
+          className="w-10 h-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -109,7 +109,7 @@ export default function FeaturesSection() {
     {
       icon: (
         <svg
-          className="w-12 h-12"
+          className="w-10 h-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -129,48 +129,43 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#1a1d3a]">
       <div className="container">
-        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-6">
+          <h2 className="font-bold text-white mb-6">
             Crafted Without Compromise
           </h2>
-          <p className="text-xl text-amber-800 max-w-3xl mx-auto">
+          <p className="text-gray-300 max-w-3xl mx-auto">
             We combine traditional craftsmanship with modern techniques to
             deliver flavours that exceed expectations and elevate your
             creations.
           </p>
         </div>
 
-        {/* Features Grid */}
         <div className="grid grid--3-col">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="text-center p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+              className="text-center p-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group bg-[#080a20] border border-[#2a2d4a]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-amber-900 mb-4">
-                {feature.title}
-              </h3>
-              <p className="text-amber-800 leading-relaxed">
+              <h3 className="font-semibold text-white mb-4">{feature.title}</h3>
+              <p className="text-gray-300 leading-relaxed">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* CTA Section */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-3xl p-12">
-            <h3 className="text-3xl font-bold text-amber-900 mb-4">
+          <div className="bg-[#080a20] rounded-3xl p-12 border border-[#2a2d4a]">
+            <h3 className="font-bold text-white mb-4">
               Ready to Elevate Your Flavours?
             </h3>
-            <p className="text-lg text-amber-800 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of flavour enthusiasts who have transformed their
               culinary creations with our premium extracts and syrups.
             </p>

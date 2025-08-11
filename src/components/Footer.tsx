@@ -4,13 +4,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-amber-900 text-white">
+    <footer className="bg-[#080a20] text-white">
       <div className="container py-16">
         <div className="grid grid--4-col gap-8 mb-12">
-          {/* Company Info */}
           <div className="col-span-2 md:col-span-1">
             <h3 className="text-2xl font-bold mb-4">Blind Owl Flavour Co.</h3>
-            <p className="text-amber-200 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-6 leading-relaxed">
               Crafting bold, premium extracts and syrups that elevate everything
               they touch — from lattes to cocktails to desserts. Made in
               Vancouver.
@@ -18,7 +17,7 @@ export default function Footer() {
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="text-amber-200 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-white transition-colors"
               >
                 <svg
                   className="w-6 h-6"
@@ -30,7 +29,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="text-amber-200 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-white transition-colors"
               >
                 <svg
                   className="w-6 h-6"
@@ -43,14 +42,13 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/"
-                  className="text-amber-200 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   Home
                 </Link>
@@ -58,7 +56,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/shop"
-                  className="text-amber-200 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   Shop
                 </Link>
@@ -66,7 +64,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-amber-200 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   About Us
                 </Link>
@@ -74,7 +72,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-amber-200 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   Contact
                 </Link>
@@ -82,14 +80,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Products */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Products</h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/shop/simple-syrups"
-                  className="text-amber-200 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   Simple Syrups
                 </Link>
@@ -97,7 +94,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/shop/culinary-extracts"
-                  className="text-amber-200 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   Culinary Extracts
                 </Link>
@@ -105,7 +102,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/shop/savory"
-                  className="text-amber-200 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   Savory Products
                 </Link>
@@ -113,7 +110,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/shop/breakfast"
-                  className="text-amber-200 hover:text-white transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   Breakfast Boosters
                 </Link>
@@ -121,10 +118,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <div className="space-y-2 text-amber-200">
+            <div className="space-y-2 text-gray-300">
               <p>Strathcona, Vancouver</p>
               <p>British Columbia, Canada</p>
               <p className="mt-4">hello@blindowl.ca</p>
@@ -133,11 +129,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Newsletter */}
-        <div className="border-t border-amber-800 pt-8 mb-8">
+        <div className="border-t border-[#2a2d4a] pt-8 mb-8">
           <div className="text-center">
             <h4 className="text-xl font-semibold mb-4">Stay Updated</h4>
-            <p className="text-amber-200 mb-6">
+            <p className="text-gray-300 mb-6">
               Get the latest recipes, flavour tips, and product updates
               delivered to your inbox.
             </p>
@@ -145,7 +140,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-amber-800 border border-amber-700 text-white placeholder-amber-300 focus:outline-none focus:border-amber-500 transition-colors"
+                className="flex-1 px-4 py-3 rounded-lg bg-[#1a1d3a] border border-[#2a2d4a] text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
               />
               <button className="btn btn-primary whitespace-nowrap">
                 Subscribe
@@ -154,22 +149,21 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-amber-800 pt-8">
+        <div className="border-t border-[#2a2d4a] pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-amber-200 text-sm">
+            <p className="text-gray-300 text-sm">
               © {currentYear} Blind Owl Flavour Co. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 href="/privacy"
-                className="text-amber-200 hover:text-white text-sm transition-colors"
+                className="text-gray-300 hover:text-white text-sm transition-colors"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-amber-200 hover:text-white text-sm transition-colors"
+                className="text-gray-300 hover:text-white text-sm transition-colors"
               >
                 Terms of Service
               </Link>
