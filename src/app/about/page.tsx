@@ -51,9 +51,9 @@ export default function AboutPage() {
         {/* Values Section */}
         <section className="py-20 bg-[#080a20]">
           <div className="container">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 max-w-3xl mx-auto">
               <h2 className="font-bold text-white mb-6">Our Core Values</h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <p className="text-gray-300">
                 These principles guide everything we do and shape how we craft
                 our flavours.
               </p>
@@ -165,11 +165,11 @@ export default function AboutPage() {
         {/* Team Section */}
         <section className="py-20 bg-[#080a20]">
           <div className="container">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 max-w-3xl mx-auto">
               <h2 className="font-bold text-white mb-6">
                 Meet Our Flavour Team
               </h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <p className="text-gray-300">
                 The passionate individuals behind our flavours who are dedicated
                 to helping you create extraordinary culinary experiences.
               </p>
@@ -218,11 +218,11 @@ export default function AboutPage() {
         {/* Process Section */}
         <section className="py-20 bg-[#1a1d3a]">
           <div className="container">
-            <div className="text-center mb-16">
+            <div className="text-center mb-16 max-w-3xl mx-auto">
               <h2 className="font-bold text-white mb-6">
                 How We Craft Our Flavours
               </h2>
-              <p className="text-gray-300 max-w-3xl mx-auto">
+              <p className="text-gray-300">
                 Every batch is carefully crafted using traditional methods and
                 modern techniques to ensure consistent, exceptional quality.
               </p>

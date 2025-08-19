@@ -50,9 +50,9 @@ export default function TestimonialsSection() {
   return (
     <section className="py-20 bg-[#080a20]">
       <div className="container">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
           <h2 className="font-bold text-white mb-6">What Our Customers Say</h2>
-          <p className="text-gray-300 max-w-3xl mx-auto">
+          <p className="text-gray-300">
             Don't just take our word for it. Here's what chefs, bartenders, and
             home cooks have to say about our premium extracts and syrups.
           </p>
@@ -77,7 +77,7 @@ export default function TestimonialsSection() {
                   <div className="font-semibold text-white">
                     {testimonial.name}
                   </div>
-                  <div className="text-gray-400 text-sm">
+                  <div className="text-gray-400 text-xl">
                     {testimonial.role}
                   </div>
                 </div>
@@ -92,16 +92,16 @@ export default function TestimonialsSection() {
               Trusted by Culinary Professionals
             </h3>
             <div className="grid grid--4-col items-center gap-8">
-              <div className="text-blue-400 font-semibold text-lg">
+              <div className="text-blue-400 font-semibold text-3xl">
                 Restaurants
               </div>
-              <div className="text-blue-400 font-semibold text-lg">
+              <div className="text-blue-400 font-semibold text-3xl">
                 Bakeries
               </div>
-              <div className="text-blue-400 font-semibold text-lg">
+              <div className="text-blue-400 font-semibold text-3xl">
                 Coffee Shops
               </div>
-              <div className="text-blue-400 font-semibold text-lg">
+              <div className="text-blue-400 font-semibold text-3xl">
                 Home Chefs
               </div>
             </div>

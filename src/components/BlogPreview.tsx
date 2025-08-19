@@ -40,9 +40,9 @@ export default function BlogPreview() {
   return (
     <section className="py-20 bg-[#1a1d3a]">
       <div className="container">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
           <h2 className="font-bold text-white mb-6">Flavour Inspiration</h2>
-          <p className="text-gray-300 max-w-3xl mx-auto">
+          <p className="text-gray-300">
             Discover creative ways to use our extracts and syrups, from baking
             tips to cocktail recipes and everything in between.
           </p>
@@ -61,7 +61,7 @@ export default function BlogPreview() {
                 </div>
               </div>
               <div className="p-6">
-                <div className="inline-block bg-blue-900 text-blue-300 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+                <div className="inline-block bg-blue-900 text-blue-300 text-xl font-semibold px-3 py-1 rounded-full mb-3">
                   {post.category}
                 </div>
                 <h3 className="font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
@@ -70,7 +70,7 @@ export default function BlogPreview() {
                 <p className="text-gray-300 mb-4 leading-relaxed">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center justify-between text-sm text-gray-400">
+                <div className="flex items-center justify-between text-xl text-gray-400">
                   <div className="flex items-center space-x-2">
                     <span>{post.author}</span>
                     <span>•</span>

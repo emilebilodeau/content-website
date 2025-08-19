@@ -131,11 +131,11 @@ export default function FeaturesSection() {
   return (
     <section className="py-20 bg-[#1a1d3a]">
       <div className="container">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="font-bold text-white mb-6">
             Crafted Without Compromise
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto">
+          <p className="text-gray-300">
             We combine traditional craftsmanship with modern techniques to
             deliver flavours that exceed expectations and elevate your
             creations.
@@ -160,12 +160,12 @@ export default function FeaturesSection() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center mx-auto">
           <div className="bg-[#080a20] rounded-3xl p-12 border border-[#2a2d4a]">
             <h3 className="font-bold text-white mb-4">
               Ready to Elevate Your Flavours?
             </h3>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-8">
               Join thousands of flavour enthusiasts who have transformed their
               culinary creations with our premium extracts and syrups.
             </p>
