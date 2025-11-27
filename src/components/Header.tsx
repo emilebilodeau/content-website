@@ -23,17 +23,25 @@ export default function Header() {
             >
               Home
             </Link>
-            <Link
-              href="/shop"
+            <a
+              href="https://blindowl.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-300 hover:text-white transition-colors"
             >
               Shop
-            </Link>
+            </a>
             <Link
               href="/about"
               className="text-gray-300 hover:text-white transition-colors"
             >
               About
+            </Link>
+            <Link
+              href="/recipes"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              Recipes
             </Link>
             <Link
               href="/contact"
